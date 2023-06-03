@@ -1,4 +1,10 @@
 import torch
 
-# Check the cuda device
-print(torch.cuda.current_device())
+def checkCuda():
+    if torch.cuda.is_available():
+        print("CUDA is available")
+    else:
+        print("No CUDA device available")
+
+
+checkCuda()
